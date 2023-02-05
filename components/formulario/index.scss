@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.formulario_title{
+    font-size: 3.625rem;
+    width: 14ch;
+    text-align: center;
+    font-family: $font-secondary;
+    color: $color-primary;
+    font-weight: 700;
+}
+
+.formulario_paragraph{
+    font-size: 1.5625rem;
+    margin: 0 14rem 3.125rem;
+    text-align: center;
+    font-family: $font-terciary;
+    color: $color-primary;
+
+}
+
+div>.formulario_button{
+    margin-bottom: 2.5rem;
+    background-color: $color-nav;
+    border: solid 0.01rem $color-nav;
+    border-radius: 20rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $font-primary;
+}
+
+div>.formulario_button:hover{
+    margin-bottom: 2.5rem;
+    background-color: $color-nav;
+    border: solid 0.01rem $color-nav;
+    border-radius: 20rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}

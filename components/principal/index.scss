@@ -1,0 +1,38 @@
+@import '../../variables.scss';
+
+.Principal_row{
+    margin-bottom: 15rem;
+}
+
+.Principal_col1{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.Principal_col1 img{
+    width: 60%;
+}
+
+.Principal_col2 h2{
+    width: 15ch;
+    color: $color-primary;
+}
+
+.Principal_col2 p{
+    width: 40ch;
+    color: $color-secondary;
+}
+
+.Principal_col2 button{
+    width: 25%;
+    background-color: $color-primary;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 4rem;
+}
+
+.Principal_col2 button:hover{
+background-color: $color-primary;
+border: none;
+}

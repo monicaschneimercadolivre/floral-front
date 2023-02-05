@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+.text-color h2{
+    color: $color-primary;
+
+}
+
+.text-color p{
+    color: $color-list;
+}
+
+.slick-track>.slick-slide {
+    width: 25vw;
+    display: flex;
+    
+    outline: none;
+    justify-content: center;
+}
+
+.slick-slide>div{
+    width: 20vw;
+    
+}
+
+
+.width{
+    width: 20vw;
+}
+.aligment{
+    margin-top: 9.6875rem;
+    margin-bottom: 7.9375rem;
+    
+}
+
+.aligment h2{
+    font-size:3.625rem;
+    font-family:$font-secondary;
+    color: $color-primary;
+}
+
+.aligment h5{
+    font-size:1.5625rem;
+    font-family:$font-primary;
+    color: $color-list;
+}
+.slick-slide img{
+    width: 18vw;
+}
+.button>.btn{
+    border: solid $color-primary 0.1rem;
+    background-color:$color-primary;
+    border-radius: 50%;
+    color: white;
+    margin-right: 1rem;
+    margin-left: 1rem;
+  
+}
+
+.carousel__button>.carousel__button-btn{
+    background-color: $color-primary;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 4rem;
+    
+}
+
+.width h2{
+    color: $color-primary;
+}
+
+.width p{
+    color: $color-secondary;
+}
+
+.carousel__button>.carousel__button-btn:hover{
+    background-color: $color-primary;
+    border: none;
+}
+.heart{
+    color: $color-nav;
+}
+
+.slick-slider >.slick-arrow{
+   position: absolute;
+   left: 0;
+}

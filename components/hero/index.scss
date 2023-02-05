@@ -1,0 +1,87 @@
+@import '../../variables.scss';
+
+.img-size{
+    max-width: 100%;
+}
+
+.row-size{
+    max-width: 100%;
+}
+
+.col__text h3{
+    font-size: 3.625rem;
+    font-family: $font-secondary;
+    font-weight: 800;
+    color: $color-primary;
+}
+
+.col__text h4{
+    font-size:1.5625rem;
+    font-family: $font-primary;
+    font-weight: 600;
+    color: $color-secondary;
+}
+    
+.col__text p{
+    font-size:1.5625rem;
+    font-family: $font-terciary;
+    font-weight: 400;
+    color: $color-secondary;
+}
+
+.ramo2{
+    position: relative;
+    left: 8rem;
+    top: 2rem;
+}
+
+
+.ramo1{
+    position: relative;
+    right: 8rem;
+    top: 7rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .ramo2{
+        position: relative;
+        left: 14rem;
+        top: -3rem;
+    }    
+    
+    .ramo1{
+        position: relative;
+        top: 8rem;
+        right: 14rem;
+}
+}
+
+.shop{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.readMore{
+    align-self: center;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+
+   
+}
+
+.readMore h5{
+    font-family: $font-primary;
+    font-weight: 800;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+}
+
+.shop .shop__btn{
+    border: solid 0.1rem $color-primary;
+    border-radius: 50rem;
+    background-color: $color-primary;
+    font-family: $font-primary;
+    font-weight: 800;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+}

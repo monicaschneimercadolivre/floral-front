@@ -1,0 +1,18 @@
+@import '../../variables.scss';
+
+.text-color h2{
+    color: $color-primary;
+    font-family: $font-secondary;
+    font-size: 3.625rem;
+}
+
+.text-color p{
+    color: $color-list;
+    font-family: $font-primary;
+    font-size: 1.5625rem;
+}
+
+.image{
+    width: 66.75rem;
+    height: 39.31rem;
+}
