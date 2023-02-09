@@ -1,0 +1,50 @@
+@import '../../variables.scss';
+
+.navbar__color{
+    background-color: $color-nav;
+
+    .dropdown-toggle.nav-link{
+        color: #fff;
+    }
+    
+}
+
+div .navbar .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.nav__text{     
+        color: #ffff;
+        font-size: 0.6875rem;
+        font-family: $font-primary;
+        font-weight: 800;
+    
+}
+
+.nav .btn{ 
+    border-radius: 50rem;
+    border: solid 0.1rem;
+    font-size: 0.6875rem;
+    border: solid 0.1rem #ffff;
+    background-color: unset;
+    font-family: $font-primary;
+    font-weight: 800;
+}
+
+.nav .btn:hover{
+    background-color: #ffff;
+    color: $color-primary;
+    border: solid 0.1rem #ffff;
+}
+
+.nav__text{
+    color: #ffff;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+.nav__text:hover{
+    color: #ffff;
+}
+

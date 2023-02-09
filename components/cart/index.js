@@ -5,13 +5,14 @@ import { Table, Button, message } from 'antd';
 import { Card } from 'antd';
 import { useState, useEffect } from "react";
 import CartContext from '../../utils/context';
+import Loggin from '../login'
 const PropTypes = require('prop-types');
 
 const Cart = () => {
     const [subtotal, setSubTotal] = useState(0)
     const [delivery, setDelivery] = useState(0)
     const { ...context } = CartContext.useCartContext()
-    const { cart } = context
+    const { cart, isCart } = context
 
     const key = 'updatable';
 
@@ -51,13 +52,12 @@ const Cart = () => {
     }
 
     useEffect(() => {
-        console.log('estou na view')
         cartProducts()
     }, [cartProducts])
 
     return (
         <>
-            <ShoppingCart>
+            {isCart ? (<ShoppingCart>
                 <ShoppingCartTtile>Seu Carrinho</ShoppingCartTtile>
                 <Row lg='12'>
                     <Col lg='6' xs='12'>
@@ -88,7 +88,10 @@ const Cart = () => {
                         </Card>
                     </Col>
                 </Row>
-            </ShoppingCart>
+            </ShoppingCart>):
+            <Loggin />
+            }
+
         </>
     )
 }
@@ -105,6 +108,6 @@ const ShoppingCart = styled.div`
 
 Cart.prototypes = {
     Cart: PropTypes.shape([{}]),
-  }
+}
 
 module.exports = Cart
