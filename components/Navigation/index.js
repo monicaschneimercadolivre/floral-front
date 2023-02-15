@@ -11,7 +11,7 @@ const PropTypes = require('prop-types');
 
 const Navigation = () => {
   const { ...context } = CartContext.useCartContext()
-  const { cart, setIsCart, setIsHome, setLoggin} = context
+  const { cart, setIsCart, setIsHome, setLoggin, user} = context
 
   return (
     <Navbar className='navbar__color' expand='lg'>
@@ -37,7 +37,7 @@ const Navigation = () => {
               Sign in
         
             </Button>
-            <Button onClick={()=>{setIsCart(true); setIsHome(false)}}>
+            <Button onClick={user ? ()=>{setIsCart(true); setIsHome(false)} :  ()=> {setLoggin(true); setIsHome(false)}}>
               <FontAwesomeIcon size="2x" icon={faShoppingCart} />
             </Button>
           </Nav>

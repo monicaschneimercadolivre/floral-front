@@ -53,7 +53,7 @@ const NavigationUser = () => {
 };
 
 NavigationUser.prototypes = {
-  Cart: PropTypes.shape([{}]),
+  cart: PropTypes.shape([{}]),
   setIsCart: PropTypes.bool,
   setIsHome: PropTypes.bool,
   setLoggout: PropTypes.bool

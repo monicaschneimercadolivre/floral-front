@@ -25,12 +25,12 @@ const Home = () => {
   const tabs = [
     {
       id: 'cart',
-      component: <Cart />,
+      component: <Cart/>,
       shouldRender: isCart
     },
     {
       id: 'home',
-      component: <PrincipalHome />,
+      component: <PrincipalHome isHome={isHome}/>,
       shouldRender: isHome
     },
     {
@@ -42,8 +42,8 @@ const Home = () => {
 
 
   useEffect(() => {
-    console.log(isCart, isHome, isLoggin, user)
-  }, [isCart, isHome, isLoggin, user])
+    console.log(isCart, isHome, isLoggin, user, cart)
+  }, [isCart, isHome, isLoggin, user, cart ])
 
   return (
     <>

@@ -15,7 +15,11 @@ const nextConfig = {
     //   'stompjs': node_dir + '/stompjs/lib/stomp.js' }
 
     return config;
-  }
+  },
+  images: {
+    domains: ['localhost'],
+    loader: 'default'
+  },
 }
 
 module.exports = nextConfig

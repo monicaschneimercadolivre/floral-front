@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { Table, Button, message } from 'antd';
@@ -12,11 +12,9 @@ const Cart = () => {
     const [subtotal, setSubTotal] = useState(0)
     const [delivery, setDelivery] = useState(0)
     const { ...context } = CartContext.useCartContext()
-    const { cart, isCart } = context
+    const { cart, isCart, userName } = context
 
     const key = 'updatable';
-
-    const dataSource = cart?.slice(1)
 
     const columns = [
         {
@@ -45,24 +43,25 @@ const Cart = () => {
         }, 1000)
     }
 
-    const cartProducts = async () => {
-        const preco = await dataSource?.map(p => p.price).reduce((acc, prev) => (acc + prev), 0)
+    const cartProducts =   async() => {
+        const preco = await cart.slice(1)?.map(p => p.price)
+        console.log(preco)
         setSubTotal(preco ? preco : 0)
-
     }
 
-    useEffect(() => {
+    useEffect(()=>{
         cartProducts()
-    }, [cartProducts])
+        console.log(subtotal)
+    }, [cart])
 
     return (
         <>
-            {isCart ? (<ShoppingCart>
-                <ShoppingCartTtile>Seu Carrinho</ShoppingCartTtile>
+            <ShoppingCart>
+                <ShoppingCartTtile>Olá {userName}! Vamos completar seu carrinho?</ShoppingCartTtile>
                 <Row lg='12'>
                     <Col lg='6' xs='12'>
                         <Table
-                            dataSource={dataSource?.map((c) => (
+                            dataSource={cart?.map((c) => (
                                 {
                                     key: c.id,
                                     name: c.title,
@@ -88,10 +87,7 @@ const Cart = () => {
                         </Card>
                     </Col>
                 </Row>
-            </ShoppingCart>):
-            <Loggin />
-            }
-
+            </ShoppingCart>
         </>
     )
 }

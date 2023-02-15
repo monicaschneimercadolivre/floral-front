@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css"
 import Hero from '../hero';
@@ -12,14 +12,14 @@ import PostPrincipal from '../../data/PostPrincipal';
 import Principal from '../principal';
 import Formulario from '../formulario';
 
-const Home = () => {
+const Home = ({isHome}) => {
 
  return (
     <>
         <Hero />
         <Lista posts={Posts} />
         <Products
-          posts={PostProducts}
+          isHome={isHome}
         />
         <Movie />
         <Sale />
